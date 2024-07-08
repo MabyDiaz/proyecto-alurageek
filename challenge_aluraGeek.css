@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700&family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+header {
+  width: 100%;
+  height: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5300c8;
+  padding: 20px 0;
+}
+
+header .logo {
+  width: 25%;
+}
+
+main {
+  width: 100vw;
+  padding: 60px 40px;
+  display: flex;
+  gap: 70px;
+}
+
+.productos-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 40px;
+  gap: 5rem;
+}
+
+.productos-container h1,
+.form-container h2 {
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 24px;
+}
+
+#no-productos {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #03318c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.productos-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  height: 320px;
+  padding: 20px;
+  margin: 20px;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #5d04d9;
+}
+
+.product-card img {
+  width: 100%;
+  height: 174px;
+  object-fit: cover;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-container--info {
+  width: 100%;
+  text-align: center;
+}
+
+.card-container--info p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.card-container--value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card-container--value p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.card-container--value img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card-container--value img:hover {
+  transform: scale(1.2);
+}
+
+.product-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-container--value .fa-trash-alt {
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 0.2s;
+}
+
+.card-container--value .fa-trash-alt:hover {
+  transform: scale(1.2);
+}
+
+.form-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  text-align: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.form-container form input {
+  width: 100%;
+  height: 58px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: #03318c;
+  border: 3px solid #03318c;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+input:focus {
+  color: #03318c;
+  border-color: #03318c;
+  opacity: 1;
+}
+
+input::placeholder {
+  color: #03318c;
+  opacity: 1;
+}
+
+input:focus::placeholder {
+  color: #03318c;
+  opacity: 1;
+}
+
+.buttons {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-submit,
+.btn-reset {
+  width: 188px;
+  height: 55px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  background-color: #03318c;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  transition: all 2s ease;
+}
+
+.btn-submit:hover {
+  background-color: transparent;
+  color: #03318c;
+  border: 4px solid #03318c;
+}
+
+.btn-reset {
+  background-color: transparent;
+  color: #03318c;
+  border: 4px solid #03318c;
+  border-radius: 15px;
+  transition: all 2s ease;
+}
+
+.btn-reset:hover {
+  background-color: #03318c;
+  color: #ffffff;
+  border: none;
+}
+
+.footer {
+  width: 100%;
+  height: 16%;
+  background-color: #5300c8;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text {
+  font-family: 'IBM Plex Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
